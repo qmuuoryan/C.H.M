@@ -2,8 +2,7 @@ from django import forms
 from django.contrib.auth.forms import UserCreationForm
 from django.db import transaction
 from django.forms.utils import ValidationError
-
-from users.models import (Farmer,User)
+from chmapp.models import (Farmer,User)
 
 class InsurancecompanySignupForm(UserCreationForm):
     class Meta(UserCreationForm.Meta):
