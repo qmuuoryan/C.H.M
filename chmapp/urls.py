@@ -1,6 +1,11 @@
-from django.conf.urls import url
-from rest_framework.authtoken import views as drf_views
+from django.urls import include, path
+
+from .views import farmhealth, farmer, insuranceCompany
 
 urlpatterns = [
-    url(r'^auth$', drf_views.obtain_auth_token, name='auth'),
+    path('', farmhealth.home, name='home'),
+
+    path('farmer/', include(([ path('', farmer.index, name='index'),], 'farmhealth'), namespace='farmer')),
+    path('insuranceCompany/', include(([ path('', insuranceCompany.index, name='index'), ], 'farmhealth'), namespace='insuranceCompany')),
+
 ]
