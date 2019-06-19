@@ -1,1 +1,1 @@
-web: gunicorn chmProject.wsgi --log-file 
+web: gunicorn chmProject.wsgi --log-file - 
