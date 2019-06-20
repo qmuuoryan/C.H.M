@@ -13,5 +13,5 @@ class User(AbstractUser):
     is_insuranceCompany = models.BooleanField(default=False)
 
 class Farmer(models.Model):
-    user = models.OneToOneField(User , on_delete=models.CASCADE, primary_key=True)
+    user = models.OneToOneField(User, on_delete=models.CASCADE, primary_key=True)
     
